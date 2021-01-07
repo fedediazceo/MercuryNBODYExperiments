@@ -1,0 +1,18 @@
+Folders
+
+MercuryBase6_5: Base folder with Mercury6_5 (scalar product fix)
+MercuryF90: Just a base conversion
+MercuryParallel-NoConsoleOutput: Base6_5 modified with parallel DRCT execution. Removed all console outputs on lines 6285-6286 and 6292-6293
+MercurySinCosIntrinsic-NoConsoleOutput: Same as above, withotu parallelism but modified the custom code to compute sin-cos by using instrinsic language functions
+MercurySinCosIntrinsicParallel-NoConsoleOutput: All of the above
+
+50Cases: 
+Inside here, in folder "Cases", there are 50 big[n].in files, which correspond to the proper cases executed. 
+In order to use any of these ones, copy to the folder on the program you want to use, and rename the file to big.in.
+To compile, remember to use the wizardry flag '-std=legacy', if not, face consequences and the wrath of the fortran godevs
+
+Inside the folder "CaseGenerator", there is the case generator provided (it generates cases by providing a negative value starting with -2. Yeah, who knows)
+There is also a bash script to run 50 executions in a loop, to perform the actual tests, called "GenerateCases.sh" 
+Just a basic script
+
+Enjoy!
